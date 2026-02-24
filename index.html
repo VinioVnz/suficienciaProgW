@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD dummy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><button data-page="inserir">Inserir</button></li>
+          <li><button data-page="listar">Listar</button></li>
+          <li><button data-page="alterar">Alterar</button></li>
+          <li><button data-page="excluir">Excluir</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inserir" class="page active">
+        <h2>Inserir</h2>
+        <form action="">
+          <label>Nome</label>
+          <input type="text" id="nome" />
+
+          <label>Salário</label>
+          <input type="number" id="salario" />
+
+          <label>Idade</label>
+          <input type="number" id="idade" />
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section id="listar" class="page">
+        <h2>Listar</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Salário</th>
+              <th>Idade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="excluir" class="page">
+        <h2>Excluir</h2>
+        <form action="">
+          <label>Id</label>
+          <input type="number" />
+          <button type="submit">Excluir</button>
+        </form>
+      </section>
+
+      <section id="alterar" class="page">
+        <h2>Alterar</h2>
+        <form>
+          <label for="alterar-nome">Nome</label>
+          <input type="text" id="alterar-nome" />
+
+          <label for="alterar-salario">Salário</label>
+          <input type="number" id="alterar-salario" />
+
+          <label for="alterar-idade">Idade</label>
+          <input type="number" id="alterar-idade" />
+
+          <button type="submit">Atualizar</button>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
