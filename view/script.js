@@ -1,3 +1,4 @@
+import { carregarLista } from "../controller/controller.js";
 const buttons = document.querySelectorAll("nav button");
 const pages = document.querySelectorAll(".page");
 
@@ -10,4 +11,10 @@ buttons.forEach(button => {
 
     document.getElementById(target).classList.add("active");
   });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  carregarLista();
 });
