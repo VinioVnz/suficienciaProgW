@@ -1,4 +1,4 @@
-export function renderizarTabela(lista) {
+export default function renderizarTabela(lista) {
   const tbody = document.querySelector("tbody");
 
   tbody.innerHTML = "";

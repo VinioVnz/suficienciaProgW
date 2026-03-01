@@ -1,10 +1,7 @@
-import FuncionarioService from "../service/funcionario_service.js";
-import { renderizarTabela } from "../view/view.js";
-
+import renderPage from "./paginacao_controller.js";
 export async function carregarLista() {
   try {
-    const lista = await FuncionarioService.getAll();
-    renderizarTabela(lista);
+    await renderPage.proximo();
   } catch (error) {
     alert(error.message);
     console.error(error);

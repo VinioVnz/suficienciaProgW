@@ -47,7 +47,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    
+
 }
 
 /* CARD MATERIAL */
@@ -97,6 +97,12 @@ button {
     transition: 0.3s;
 }
 
+.botoes-paginacao {
+    display: flex;
+    gap: 10px;
+
+}
+
 button:hover {
     background-color: #3700b3;
 }
@@ -127,9 +133,9 @@ td {
 }
 
 .page {
-  display: none;
+    display: none;
 }
 
 .page.active {
-  display: block;
+    display: block;
 }
