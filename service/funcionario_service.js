@@ -27,10 +27,38 @@ class FuncionarioService {
         body: JSON.stringify(dados),
       },
     );
+    if (response.status === 429) {
+      throw new Error("Muitas requisições. Tente novamente mais tarde.");
+    }
+
+    if (!response.ok) {
+      throw new Error("Erro na API: " + response.status);
+    }
+    const data = await response.json();
+    const f = data.data;
+    return new Funcionario(data.id, data.name, data.salary, data.age);
+  }
+
+  async update(id,dados){
+    const response = await fetch(
+      `https://dummy.restapiexample.com/api/v1/update/${id}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados),
+      }
+    )
+    if (response.status === 429) {
+      throw new Error("Muitas requisições. Tente novamente mais tarde.");
+    }
+
+    if (!response.ok) {
+      throw new Error("Erro na API: " + response.status);
+    }
 
     const data = await response.json();
 
-    return new Funcionario(data.id, data.name, data.salary, data.age);
+    return data;
   }
 }
 

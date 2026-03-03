@@ -1,4 +1,4 @@
-import { carregarLista } from "../controller/controller.js";
+import Controller from "../controller/controller.js";
 const buttons = document.querySelectorAll("nav button");
 const pages = document.querySelectorAll(".page");
 
@@ -14,7 +14,8 @@ buttons.forEach(button => {
 });
 
 
+document.getElementById("form-criar").addEventListener("submit", Controller.criar)
 
-document.addEventListener("DOMContentLoaded", () => {
-  carregarLista();
-});
+/* document.addEventListener("DOMContentLoaded", () => {
+  Controller.carregarLista();
+}); */
